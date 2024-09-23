@@ -18,16 +18,16 @@ function App() {
   }
 
 
-  useEffect(() => {
-    getMovie('godfather');
-  }, []);  
+  // useEffect(() => {
+  //   getMovie('godfather');
+  // }, []);  
   
   return (
-    <>
+    <div className='main'>
 
      <Form getMovie={getMovie} />
      <MoviDisplay movie={movie} />
-    </>
+    </div>
   )
 }
 

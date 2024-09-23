@@ -31,8 +31,7 @@ function MoviDisplay({movie}) {
   const loading = ()=>{
     return(
       <>
-      <h1>Now is Loading</h1>
-      
+        <img src="https://media2.giphy.com/media/uIJBFZoOaifHf52MER/giphy.gif?cid=6c09b95292w6xelslxhghnmi3kf8r8xbmkrnh2zlkxd0388f&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="" />      
       </>
     )
   }

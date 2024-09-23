@@ -1,8 +1,25 @@
+body{
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  /* display: flex; */
+  justify-content: center;
+  /* align-items: center; */
+}
+.main img{ 
+width: 80%;
+margin-left: 10%;
+}
+.text{
+  width: 50vw;
+}
 .form{
  
   display: flex;
   justify-content: center;
-   align-items: center;
+  align-items: center;
+  margin: 1em;
 }
 .flex{
   display: flex;

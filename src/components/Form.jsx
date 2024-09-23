@@ -21,12 +21,13 @@ function Form({getMovie}) {
     <div className='form'>
       <form onSubmit={handleSubmit}>
         <input
+          className='text'
           type="text"
           name="searchterm"
           onChange={handleChange}
           value={formData.searchterm}
         />
-        <input type="submit" value="submit" />
+        <input type="submit" value="search" />
       </form>
     
     </div>
