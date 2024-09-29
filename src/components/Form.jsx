@@ -1,6 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 
-function Form({getMovie}) {
+function Form({setMovie, ApiKey}) {
+  const  getMovie = async(term)=>{
+    const response = await fetch(
+      `https://www.omdbapi.com/?apikey=${ApiKey}&t=${term}`)
+
+     const data = await response.json()
+     console.log(data)
+
+     setMovie(data)
+  }
+
+
+  useEffect(() => {
+    getMovie('godfather');
+  }, []);  
+  
   const [formData,setFormData]= useState({
     searchterm:''
 });
@@ -26,8 +41,9 @@ function Form({getMovie}) {
           name="searchterm"
           onChange={handleChange}
           value={formData.searchterm}
+          placeholder="Search for a movie..."
         />
-        <input type="submit" value="search" />
+        <input className='submit' type="submit" value="search" />
       </form>
     
     </div>

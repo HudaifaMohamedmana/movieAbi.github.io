@@ -7,16 +7,18 @@ function MoviDisplay({movie}) {
       <div className="flex" >      
         <div className="poster">
         <img src={movie.Poster} alt="" />
+        <div className='stars'>Ratings: {movie.Ratings[0].Value}</div>
+        Year: {movie.Year}
+
       </div>
-      <div >
+      <div className='dec'>
       <div className="title"> 
-        {movie.Title}
+        <h2>{movie.Title}</h2>
         </div>
+        
 
       <div className="info">
         genre: {movie.Genre}
-        <hr />
-        Year: {movie.Year}
         <hr />
 
        {movie.Plot}

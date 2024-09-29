@@ -2,18 +2,34 @@ body{
   justify-content: center;
   align-items: center;
 }
+button, .submit{
+  cursor: pointer;
+  color: black;
+}
+nav{
+
+  border: solid;
+  background-color: black;
+  border-radius: 10px;
+  /* height: 10vh; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav img{
+  height: 10vh;
+  /* background-color: white; */
+
+}
 .main{
   /* display: flex; */
   justify-content: center;
   /* align-items: center; */
+  margin: 10px;
 }
-.main img{ 
-width: 80%;
-margin-left: 10%;
-}
-.text{
+/* .text{
   width: 50vw;
-}
+} */
 .form{
  
   display: flex;
@@ -24,7 +40,25 @@ margin-left: 10%;
 .flex{
   display: flex;
 }
-.flex div{
+.dec{
   border: solid;
   margin: 3px;
+  padding: 2px;
+  border-radius: 20px;
+ text-align: center;
+}
+.poster{
+  width: 40%;
+border: solid;
+margin: 3px;
+text-align: center;
+border-radius: 20px;
+
+}
+
+.poster img{
+  width: 100%;
+  background-color: #3131;
+  border-radius: 20px;
+  
 }
