@@ -1,28 +1,33 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { MovieContext } from '../App'; 
 
-function MoviDisplay({movie}) {
+function MoviDisplay() {
+  const { movie } = useContext(MovieContext);
+
   const loaded = ()=>{
     return(
       <>
-      <div className="flex" >      
-        <div className="poster">
-        <img src={movie.Poster} alt="" />
-        <div className='stars'>Ratings: {movie.Ratings[0].Value}</div>
-        Year: {movie.Year}
-
-      </div>
-      <div className='dec'>
-      <div className="title"> 
-        <h2>{movie.Title}</h2>
+        <div className="flex" >      
+          <div className="poster">
+          <img src={movie.Poster} alt="" />
+          <div className='stars'>Ratings: {movie.Ratings[0].Value}</div>
+          Year: {movie.Year}
+        </div>
+        <div className='dec'>
+        <div className="title"> 
+          <h2>
+            {movie.Title}
+          </h2>
         </div>
         
 
-      <div className="info">
-        genre: {movie.Genre}
-        <hr />
+        <div className="info">
+          genre: {movie.Genre}
+          <hr />
 
-       {movie.Plot}
-      </div>
+          {movie.Plot}
+       
+        </div>
       </div>
 
     </div>

@@ -1,22 +1,24 @@
-import { useState } from 'react'
+import { useState , createContext} from 'react'
 import './App.css'
-import Form from './components/Form'
+import { Nav } from './components/Nav'
 import MoviDisplay from'./components/moviDisplay'
+
+
+export const MovieContext = createContext();
 
 function App() {
   const [movie, setMovie] = useState(null)
-  const ApiKey = '60c8563'
+  let fiverit = []
+  createContext(movie,setMovie,fiverit)
+
   return (
-    <div className='main'>
-     <nav>
-      
-      <img src="https://www.pngplay.com/wp-content/uploads/9/20th-Century-Fox-Background-PNG.png" alt="" />
-      <div></div>
-      <div></div>
-      <Form setMovie={setMovie} ApiKey={ApiKey}/>
-      </nav>
-     <MoviDisplay movie={movie} />
-    </div>
+    <MovieContext.Provider value={{ movie, setMovie }}>
+      <div className='main'>
+        <Nav setMovie={setMovie}/>
+        <MoviDisplay movie={movie} />
+      </div>
+    </MovieContext.Provider>
+
   )
 }
 

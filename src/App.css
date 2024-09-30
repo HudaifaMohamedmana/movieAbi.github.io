@@ -4,21 +4,30 @@ body{
 }
 button, .submit{
   cursor: pointer;
-  color: black;
+}
+.faverit {
+height: 10vh;
+cursor: pointer;
+
 }
 nav{
-
   border: solid;
   background-color: black;
   border-radius: 10px;
-  /* height: 10vh; */
+  height: 13vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 30px;
+  padding-right: 10px;
 }
 nav img{
   height: 10vh;
   /* background-color: white; */
+}
+nav div{
+  display: flex;
+  align-items: center;
 
 }
 .main{
@@ -43,7 +52,7 @@ nav img{
 .dec{
   border: solid;
   margin: 3px;
-  padding: 2px;
+  padding: 20px;
   border-radius: 20px;
  text-align: center;
 }

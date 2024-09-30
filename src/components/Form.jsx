@@ -1,6 +1,12 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect, useContext} from 'react'
+import { MovieContext } from '../App';
 
-function Form({setMovie, ApiKey}) {
+function Form() {
+  const ApiKey = '60c8563'
+  const { setMovie } = useContext(MovieContext);
+
+
+
   const  getMovie = async(term)=>{
     const response = await fetch(
       `https://www.omdbapi.com/?apikey=${ApiKey}&t=${term}`)
